@@ -15,7 +15,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.crossle.android.effectivenavigation"
+    package="me.crossle.nav"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -23,7 +23,7 @@
 
     <application android:label="@string/app_name"
         android:icon="@drawable/ic_launcher"
-        android:theme="@style/Theme.Sherlock.Light">
+        android:theme="@style/Theme.nav">
 
         <activity android:name=".MainActivity" android:label="@string/app_name">
             <intent-filter>
@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".CollectionDemoActivity" android:label="@string/demo_collection" />
+        <activity android:name="me.crossle.nav.CollectionDemoActivity" label="@string/demo_collection" />
 
     </application>
 </manifest>

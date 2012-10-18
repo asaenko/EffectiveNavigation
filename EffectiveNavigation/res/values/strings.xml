@@ -21,4 +21,6 @@
 
     <string name="demo_external_activity">Demo External Activity</string>
     <string name="demo_collection">Demo Collection</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_quit">Quit</string>
 </resources>

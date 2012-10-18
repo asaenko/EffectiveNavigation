@@ -30,6 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top"
         android:background="@drawable/fragment_tab_bg"
-        android:textColor="#fff" />
+        android:textColor="#000000" />
 
 </android.support.v4.view.ViewPager>

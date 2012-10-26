@@ -19,7 +19,7 @@
     android:versionCode="1"
     android:versionName="1.0">
 
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="16"/>
 
     <application android:label="@string/app_name"
         android:icon="@drawable/ic_launcher"
@@ -33,6 +33,6 @@
         </activity>
 
         <activity android:name="me.crossle.nav.CollectionDemoActivity" label="@string/demo_collection" />
-
+        <activity android:name="me.crossle.nav.TabStripActivity" label="@string/demo_collection_tab" />
     </application>
 </manifest>

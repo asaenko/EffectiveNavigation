@@ -101,7 +101,8 @@ public class MainActivity extends SherlockFragmentActivity implements ActionBar.
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
         // When the given tab is selected, switch to the corresponding page in the ViewPager.
-        mViewPager.setCurrentItem(tab.getPosition());
+    	if (mViewPager.getCurrentItem() != tab.getPosition())
+				mViewPager.setCurrentItem(tab.getPosition());
     }
 
     @Override
@@ -174,6 +175,16 @@ public class MainActivity extends SherlockFragmentActivity implements ActionBar.
                         @Override
                         public void onClick(View view) {
                             Intent intent = new Intent(getActivity(), CollectionDemoActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+            
+            // Demonstration of a collection-browsing activity.
+            rootView.findViewById(R.id.demo_tabstrip_button)
+                    .setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(getActivity(), TabStripActivity.class);
                             startActivity(intent);
                         }
                     });

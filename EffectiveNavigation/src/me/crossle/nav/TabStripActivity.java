@@ -20,9 +20,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.NavUtils;
 import android.support.v4.app.TaskStackBuilder;
+import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +35,7 @@ import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.MenuItem;
 
 
-public class CollectionDemoActivity extends SherlockFragmentActivity {
+public class TabStripActivity extends SherlockFragmentActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide fragments representing
@@ -52,7 +53,7 @@ public class CollectionDemoActivity extends SherlockFragmentActivity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_collection_demo);
+        setContentView(R.layout.activity_tabstrip_demo);
 
         // Create an adapter that when requested, will return a fragment representing an object in
         // the collection.
@@ -71,6 +72,7 @@ public class CollectionDemoActivity extends SherlockFragmentActivity {
         // Set up the ViewPager, attaching the adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mDemoCollectionPagerAdapter);
+        
     }
 
     @Override
@@ -103,7 +105,7 @@ public class CollectionDemoActivity extends SherlockFragmentActivity {
      * A {@link android.support.v4.app.FragmentStatePagerAdapter} that returns a fragment
      * representing an object in the collection.
      */
-    public static class DemoCollectionPagerAdapter extends FragmentStatePagerAdapter {
+    public static class DemoCollectionPagerAdapter extends FragmentPagerAdapter {
 
         public DemoCollectionPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -123,11 +125,12 @@ public class CollectionDemoActivity extends SherlockFragmentActivity {
             // For this contrived example, we have a 100-object collection.
             return 100;
         }
-
+        
         @Override
         public CharSequence getPageTitle(int position) {
-            return "OBJECT " + (position + 1);
+            return "TAB " + (position + 1);
         }
+        
     }
 
     /**

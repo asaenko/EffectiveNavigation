@@ -12,27 +12,37 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
-  -->
+-->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="me.crossle.nav"
-    android:versionCode="1"
-    android:versionName="1.0">
+    android:versionCode="3"
+    android:versionName="3.0" >
 
-    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="16"/>
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
 
-    <application android:label="@string/app_name"
+    <application
         android:icon="@drawable/ic_launcher"
-        android:theme="@style/Theme.nav">
-
-        <activity android:name=".MainActivity" android:label="@string/app_name">
+        android:label="@string/app_name"
+        android:theme="@style/Theme.nav" >
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="me.crossle.nav.CollectionDemoActivity" label="@string/demo_collection" />
-        <activity android:name="me.crossle.nav.TabStripActivity" label="@string/demo_collection_tab" />
+        <activity
+            android:name="me.crossle.nav.CollectionDemoActivity"
+            android:label="@string/demo_collection" />
+        <activity
+            android:name="me.crossle.nav.TabStripActivity"
+            android:label="@string/demo_collection_tab" />
     </application>
+
 </manifest>
